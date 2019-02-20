@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customername"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@id/order"
+            android:text="@string/default_view"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:id="@+id/customeraddress"
+            android:textColor="@color/colorblack2"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@id/customername"
+            android:text="@string/default_view"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:id="@+id/mobile"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@id/customeraddress"
+            android:text="@string/default_view"
+            />
+
+        <com.github.curioustechizen.ago.RelativeTimeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_datetime_tv"
+            android:textColor="@color/colorblack2"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@id/mobile"
+            android:text="@string/default_view"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_price_tv"
+            android:textColor="@color/colorblack2"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@id/order_datetime_tv"
+            android:text="@string/default_view"
+            />
+
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/order">
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/singleorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginTop="26dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+    <!--<android.support.v7.widget.SearchView-->
+        <!--android:id="@+id/search"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:iconifiedByDefault="false">-->
+
+        <!--<requestFocus />-->
+    <!--</android.support.v7.widget.SearchView>-->
+
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:name="com.ojaexpress.merchant.ui.products.list.ProductListFragment"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:id="@+id/product_list_swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/product_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="com.ojaexpress.merchant.ui.products.list.ProductListFragment"
+        tools:listitem="@layout/fragment_product" />
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>
